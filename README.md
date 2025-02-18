@@ -13,6 +13,7 @@ A tiny script to set up a machine as a web server. It is important to notice tha
 
 - Most of the virtual machine in the market will come just with a `root` user. This script will create a normal user with `sudo` privileges.
 - This script will set up a firewall that will only allow connections to the `80` (`http`), `443` (`https`) and a custom `ssh` port.
+- It will be created the respective `ssh` key pairs to start connecting to the server using `ssh` keys instead of password.
 
 > [!NOTE]
 > This script is still in progress and will continue improving to add other relevant common configuration tasks.
@@ -21,9 +22,11 @@ A tiny script to set up a machine as a web server. It is important to notice tha
 
 Before using this tool, ensure that you have:
 
+- `ssh` installed on your system.
+
 - `ssh` access to the machine that you want to configure.
 
-- [Git](https://git-scm.com/) installed on your system.
+- [`git`](https://git-scm.com/) installed on your system.
 
 ## Installation
 
