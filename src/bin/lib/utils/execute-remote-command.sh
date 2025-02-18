@@ -17,5 +17,5 @@
 #         of the context which executed it
 ##
 execute_remote_command() {
-    ssh -p "$REMOTE_SSH_PORT" "$REMOTE_SSH_USER:$REMOTE_SSH_HOST" $4
+    ssh -p "$REMOTE_SSH_PORT" "$REMOTE_SSH_USER@$REMOTE_SSH_HOST" $4
 }
