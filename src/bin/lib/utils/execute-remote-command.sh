@@ -8,35 +8,14 @@
 ##
 # Execute remote command
 #
-# @param  string $1 Remote user
-# @param  string $2 Remote host
-# @param  string $3 Remote port
-# @param  string $4 Command
+# @param  string $1 Command
 # @return void
-# @note   If `ssh` credentials are not specified,
-#         it will be used
+# @todo   For now, this function will used
 #         `REMOTE_SSH_USER`, `REMOTE_SSH_HOST` and `REMOTE_SSH_PORT`
-#         environment variables
+#         environment variables, but this it is believed that this logic
+#         should be improved so that this function works independently
+#         of the context which executed it
 ##
 execute_remote_command() {
-    local ssh_user
-    local ssh_host
-    local ssh_port
-
-    ssh_user="$1"
-    if [ -z "$ssh_user" ]; then
-        ssh_user="$REMOTE_SSH_USER"
-    fi
-
-    ssh_host="$2"
-    if [ -z "$ssh_host" ]; then
-        ssh_host="$REMOTE_SSH_HOST"
-    fi
-
-    ssh_port="$3"
-    if [ -z "$ssh_port" ]; then
-        ssh_port="$REMOTE_SSH_PORT"
-    fi
-
-    ssh -p "$ssh_port" "$ssh_user:$ssh_host" $4
+    ssh -p "$REMOTE_SSH_PORT" "$REMOTE_SSH_USER:$REMOTE_SSH_HOST" $4
 }
