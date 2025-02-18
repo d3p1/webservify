@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/d3p1/webservify/compare/v1.1.2...v1.1.3) (2025-02-18)
+
+
+### Bug Fixes
+
+* adjust ssh connection command [[#1](https://github.com/d3p1/webservify/issues/1)] ([0639cbe](https://github.com/d3p1/webservify/commit/0639cbe62dbbdf59b362da2ec4cb605297105f41))
+
 ## [1.1.2](https://github.com/d3p1/webservify/compare/v1.1.1...v1.1.2) (2025-02-18)
 
 
