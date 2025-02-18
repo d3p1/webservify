@@ -18,9 +18,11 @@ source $BASE_DIR/lib/utils/execute-remote-command.sh
 ##
 main() {
     print_message "Start create user" "notice"
-    execute_remote_command adduser "$REMOTE_USER"
-    execute_remote_command usermod -aG sudo "$REMOTE_USER"
-    print_message "User $REMOTE_USER has been created with \`sudo\` privileges" "success"
+    if [ -n "$REMOTE_USER" ]; then
+        execute_remote_command sudo adduser "$REMOTE_USER"
+        execute_remote_command sudo usermod -aG sudo "$REMOTE_USER"
+        print_message "User $REMOTE_USER has been created with \`sudo\` privileges" "success"
+    fi
     print_message "End create user" "notice"
 }
 
