@@ -24,7 +24,7 @@ Before using this tool, ensure that you have:
 
 - `ssh` installed on your system.
 
-- `ssh` access with `root` user to the machine that you want to configure.
+- `ssh` access to the machine that you want to configure with a user with `sudo` privileges to be able to perform the necessary configuration tasks.
 
 - [`git`](https://git-scm.com/) installed on your system.
 
