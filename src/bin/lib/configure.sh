@@ -8,7 +8,6 @@
 ##
 # @note Import required utilities
 ##
-source $BASE_DIR/lib/utils/log.sh
 source $BASE_DIR/lib/utils/execute-script.sh
 
 ##
@@ -21,11 +20,6 @@ main() {
     # @note Execute script to create user
     ##
     _execute_configure_script "create-user"
-
-    ##
-    # @note Execute script to create `ssh` key pair
-    ##
-    _execute_configure_script "create-ssh-keys"
 
     ##
     # @note Execute script to add firewall
