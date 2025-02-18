@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/d3p1/webservify/compare/v1.1.3...v1.1.4) (2025-02-18)
+
+
+### Bug Fixes
+
+* adjust command executed over ssh [[#1](https://github.com/d3p1/webservify/issues/1)] ([35faa4e](https://github.com/d3p1/webservify/commit/35faa4e38d5417ffefb89fae58835ef41193a689))
+
 ## [1.1.3](https://github.com/d3p1/webservify/compare/v1.1.2...v1.1.3) (2025-02-18)
 
 
