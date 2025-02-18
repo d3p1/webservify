@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/d3p1/webservify/compare/v1.1.1...v1.1.2) (2025-02-18)
+
+
+### Bug Fixes
+
+* adjust execute remote command logic [[#1](https://github.com/d3p1/webservify/issues/1)] ([44bf5ad](https://github.com/d3p1/webservify/commit/44bf5adf2524de6f140ba3621a53808bac7a2973))
+
 ## [1.1.1](https://github.com/d3p1/webservify/compare/v1.1.0...v1.1.1) (2025-02-18)
 
 
