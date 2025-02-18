@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/d3p1/webservify/compare/v1.1.0...v1.1.1) (2025-02-18)
+
+
+### Bug Fixes
+
+* adjust webservify configuration file name [[#1](https://github.com/d3p1/webservify/issues/1)] ([c020b71](https://github.com/d3p1/webservify/commit/c020b71b24fe6b6a79caffa2488e685d9eb20668))
+
 # [1.1.0](https://github.com/d3p1/webservify/compare/v1.0.0...v1.1.0) (2025-02-18)
 
 
