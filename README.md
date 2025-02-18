@@ -16,7 +16,7 @@ A tiny script to set up a machine as a web server. It is important to notice tha
 - It will be created the respective `ssh` key pairs to start connecting to the server using `ssh` keys instead of password.
 
 > [!NOTE]
-> This script is still in progress and will continue improving to add other relevant common configuration tasks.
+> This script is still in progress and will continue improving to add other relevant common configuration tasks (like [adding `ssh` key pairs](https://github.com/d3p1/webservify/issues/5)).
 
 ## Prerequisites
 
