@@ -32,8 +32,8 @@ main() {
 ##
 _install_ufw() {
     print_message "Start install \`ufw\` package" "notice"
-    execute_remote_command sudo apt-get update
-    execute_remote_command sudo apt-get install ufw
+    execute_remote_command "sudo apt-get update"
+    execute_remote_command "sudo apt-get install ufw"
     print_message "End install \`ufw\` package" "notice"
 }
 
@@ -70,7 +70,7 @@ _allow_ufw_custom_ssh_port() {
 ##
 _enable_ufw() {
     print_message "Start enable \`ufw\` package" "notice"
-    execute_remote_command sudo ufw enable
+    execute_remote_command "sudo ufw enable"
     print_message "End enable \`ufw\` package" "notice"
 }
 
@@ -82,7 +82,7 @@ _enable_ufw() {
 ##
 _allow_ufw_port() {
     print_message "Start allow \`$1\` port" "notice"
-    execute_remote_command sudo ufw allow "$1/tcp"
+    execute_remote_command "sudo ufw allow $1/tcp"
     print_message "End allow \`$1\` port" "notice"
 }
 
