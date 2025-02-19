@@ -25,11 +25,11 @@ Before using this tool, ensure that you have:
 
 - `ssh` access to the machine that you want to configure with a user with `sudo` privileges to be able to perform the necessary configuration tasks.
 
-- [`git`](https://git-scm.com/) installed on your system.
+- [`git`](https://git-scm.com/) installed in the machine that should be set up as a web server.
 
 ## Installation
 
-To install this tool, run the following command:
+To install this tool, access using `ssh` the machine that should be set up as a web server, and run the following command:
 
 ```shell
 git clone https://github.com/d3p1/webservify.git && \

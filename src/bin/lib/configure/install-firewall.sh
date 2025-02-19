@@ -9,7 +9,6 @@
 # @note Import required utilities
 ##
 source $BASE_DIR/lib/utils/log.sh
-source $BASE_DIR/lib/utils/execute-remote-command.sh
 
 ##
 # Main
@@ -32,8 +31,8 @@ main() {
 ##
 _install_ufw() {
     print_message "Start install \`ufw\` package" "notice"
-    execute_remote_command "sudo apt-get update"
-    execute_remote_command "sudo apt-get install ufw"
+    sudo apt-get update
+    sudo apt-get install ufw
     print_message "End install \`ufw\` package" "notice"
 }
 
@@ -56,8 +55,8 @@ _allow_ufw_web_ports() {
 ##
 _allow_ufw_custom_ssh_port() {
     print_message "Start allow \`ufw\` custom ssh port" "notice"
-    if [ -n "$REMOTE_CUSTOM_SSH_PORT" ]; then
-        _allow_ufw_port "$REMOTE_CUSTOM_SSH_PORT"
+    if [ -n "$CUSTOM_SSH_PORT" ]; then
+        _allow_ufw_port "$CUSTOM_SSH_PORT"
         _configure_custom_ssh_port
     fi
     print_message "End allow \`ufw\` custom ssh port" "notice"
@@ -70,7 +69,7 @@ _allow_ufw_custom_ssh_port() {
 ##
 _enable_ufw() {
     print_message "Start enable \`ufw\` package" "notice"
-    execute_remote_command "sudo ufw enable"
+    sudo ufw enable
     print_message "End enable \`ufw\` package" "notice"
 }
 
@@ -82,7 +81,7 @@ _enable_ufw() {
 ##
 _allow_ufw_port() {
     print_message "Start allow \`$1\` port" "notice"
-    execute_remote_command "sudo ufw allow $1/tcp"
+    sudo ufw allow "$1/tcp"
     print_message "End allow \`$1\` port" "notice"
 }
 
@@ -91,17 +90,12 @@ _allow_ufw_port() {
 #
 # @return void
 # @link   https://www.hostinger.com/tutorials/how-to-change-ssh-port-vps
-# @todo   From this moment, it will be required to start using
-#         custom `ssh` port. That is why it is modified `REMOTE_SSH_PORT`
-#         environment variable used in `execute_remote_command` function.
-#         Analyze if this behavior could be improved
 ##
 _configure_custom_ssh_port() {
     print_message "Start \`ssh\` service configuration" "notice"
     sudo touch /etc/ssh/sshd_config.d/port.conf
-    echo "Port $REMOTE_CUSTOM_SSH_PORT" | sudo tee -a /etc/ssh/sshd_config.d/port.conf
+    echo "Port $CUSTOM_SSH_PORT" | sudo tee -a /etc/ssh/sshd_config.d/port.conf
     sudo systemctl restart sshd
-    export REMOTE_SSH_PORT="$REMOTE_CUSTOM_SSH_PORT"
     print_message "End \`ssh\` service configuration" "notice"
 }
 

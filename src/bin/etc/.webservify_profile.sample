@@ -2,17 +2,11 @@
 # @description Profile file to set up variables that will be used
 #              by `webservify` to initialize/set up the machine as a web server
 # @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
-# @note        The `REMOTE_SSH_USER`, `REMOTE_SSH_HOST` and `REMOTE_SSH_PORT`
-#              variables are used to connect to
-#              the respective machine via `ssh`
-# @note        The `REMOTE_USER` is the user with `sudo` privileges that
+# @note        The `CUSTOM_USER` is the user with `sudo` privileges that
 #              should be created. If it is empty, no user will be created
-# @note        The `REMOTE_CUSTOM_SSH_PORT` is the new port that should be used
+# @note        The `CUSTOM_SSH_PORT` is the new port that should be used
 #              to establish `ssh` connections. If it is empty, it will be
 #              conserved the current port (`22` by default)
 ##
-export REMOTE_SSH_USER=""
-export REMOTE_SSH_HOST=""
-export REMOTE_SSH_PORT="22"
-export REMOTE_USER=""
-export REMOTE_CUSTOM_SSH_PORT=""
+export CUSTOM_USER=""
+export CUSTOM_SSH_PORT=""
