@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/d3p1/webservify/compare/v1.1.4...v1.1.5) (2025-02-19)
+
+
+### Bug Fixes
+
+* adjust execute remote command calls [[#1](https://github.com/d3p1/webservify/issues/1)] ([dffb8b7](https://github.com/d3p1/webservify/commit/dffb8b70f2085971f02766f5b5621810a72bb213))
+
 ## [1.1.4](https://github.com/d3p1/webservify/compare/v1.1.3...v1.1.4) (2025-02-18)
 
 
