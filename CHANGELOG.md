@@ -1,3 +1,10 @@
+## [1.1.7](https://github.com/d3p1/webservify/compare/v1.1.6...v1.1.7) (2025-02-19)
+
+
+### Bug Fixes
+
+* remove remote execution of commands to start running script locally in the remote machine [[#1](https://github.com/d3p1/webservify/issues/1)] ([319cc39](https://github.com/d3p1/webservify/commit/319cc39ed4a6d34c31268d8ed63a61f2e7c1999d))
+
 ## [1.1.6](https://github.com/d3p1/webservify/compare/v1.1.5...v1.1.6) (2025-02-19)
 
 
