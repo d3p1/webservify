@@ -1,3 +1,10 @@
+## [1.1.6](https://github.com/d3p1/webservify/compare/v1.1.5...v1.1.6) (2025-02-19)
+
+
+### Bug Fixes
+
+* avoid multiple definitions in PATH of command when installed [[#1](https://github.com/d3p1/webservify/issues/1)] ([c9dc611](https://github.com/d3p1/webservify/commit/c9dc6116aaa863261ea5c45c2709e6c11645c619))
+
 ## [1.1.5](https://github.com/d3p1/webservify/compare/v1.1.4...v1.1.5) (2025-02-19)
 
 
