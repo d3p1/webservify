@@ -1,12 +1,16 @@
 ##
 # @description Profile file to set up variables that will be used
-#              by `webservify` to initialize/set up the machine as a web server
+#              by `webservify` to initialize/set up the web server
 # @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
+# @note        The `HOST` is the server IP address.
+#              It will be used to execute commands over `ssh`
+#              using the `root` user
 # @note        The `CUSTOM_USER` is the user with `sudo` privileges that
 #              should be created. If it is empty, no user will be created
 # @note        The `CUSTOM_SSH_PORT` is the new port that should be used
 #              to establish `ssh` connections. If it is empty, it will be
 #              conserved the current port (`22` by default)
 ##
+export HOST=""
 export CUSTOM_USER=""
 export CUSTOM_SSH_PORT=""
