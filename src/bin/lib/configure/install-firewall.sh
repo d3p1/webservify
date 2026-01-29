@@ -9,6 +9,7 @@
 # @note Import required utilities
 ##
 source $BASE_DIR/lib/utils/log.sh
+source $BASE_DIR/lib/utils/execute-ssh-cmd.sh
 
 ##
 # Main
@@ -31,8 +32,8 @@ main() {
 ##
 _install_ufw() {
     print_message "Start install \`ufw\` package" "notice"
-    sudo apt-get update
-    sudo apt-get install ufw
+    execute_ssh_cmd "apt-get update"
+    execute_ssh_cmd "apt-get install ufw"
     print_message "End install \`ufw\` package" "notice"
 }
 
@@ -69,7 +70,7 @@ _allow_ufw_custom_ssh_port() {
 ##
 _enable_ufw() {
     print_message "Start enable \`ufw\` package" "notice"
-    sudo ufw enable
+    execute_ssh_cmd "ufw enable"
     print_message "End enable \`ufw\` package" "notice"
 }
 
@@ -81,7 +82,7 @@ _enable_ufw() {
 ##
 _allow_ufw_port() {
     print_message "Start allow \`$1\` port" "notice"
-    sudo ufw allow "$1/tcp"
+    execute_ssh_cmd "ufw allow \"""$1/tcp""\""
     print_message "End allow \`$1\` port" "notice"
 }
 
@@ -93,9 +94,9 @@ _allow_ufw_port() {
 ##
 _configure_custom_ssh_port() {
     print_message "Start \`ssh\` service configuration" "notice"
-    sudo touch /etc/ssh/sshd_config.d/port.conf
-    echo "Port $CUSTOM_SSH_PORT" | sudo tee -a /etc/ssh/sshd_config.d/port.conf
-    sudo systemctl restart sshd
+    execute_ssh_cmd "touch /etc/ssh/sshd_config.d/port.conf"
+    execute_ssh_cmd "echo ""Port $CUSTOM_SSH_PORT"" | tee -a /etc/ssh/sshd_config.d/port.conf"
+    execute_ssh_cmd "systemctl restart sshd"
     print_message "End \`ssh\` service configuration" "notice"
 }
 
