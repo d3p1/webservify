@@ -20,6 +20,7 @@ main() {
     _gen_ssh_keys
     _copy_ssh_pub_key
     _store_ssh_connection
+    _secure_ssh
     print_message "End install auth" "notice"
 }
 
@@ -60,13 +61,27 @@ _store_ssh_connection() {
 }
 
 ##
+# Secure `ssh`
+#
+# @return void
+##
+_secure_ssh() {
+    local conf="/etc/ssh/sshd_config.d/11-secure.conf"
+
+    echo "PasswordAuthentication no" | sudo tee -a "$conf"
+    echo "PubkeyAuthentication yes" | sudo tee -a "$conf"
+
+    sudo sshd -t && sudo systemctl restart sshd
+}
+
+##
 # Add setting to `ssh` config file
 #
 # @param  string $1 Setting
 # @return void
 ##
 _add_ssh_config() {
-    echo "$1" | sudo tee ~/.ssh/config
+    echo "$1" | sudo tee -a ~/.ssh/config
 }
 
 ##
