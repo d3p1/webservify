@@ -1,3 +1,25 @@
+# [1.2.0](https://github.com/d3p1/webservify/compare/v1.1.7...v1.2.0) (2026-01-29)
+
+
+### Bug Fixes
+
+* improve user creation [[#1](https://github.com/d3p1/webservify/issues/1)] ([ce8f4e9](https://github.com/d3p1/webservify/commit/ce8f4e9900ab669ba5d8688bed0294f3beff5278))
+* improve utility that executes commands over ssh to avoid having to specify host param [[#1](https://github.com/d3p1/webservify/issues/1)] ([647c111](https://github.com/d3p1/webservify/commit/647c1119b3345e893d6157c6f570aaf6b2b53170))
+
+
+### Features
+
+* add execute ssh command utility [[#1](https://github.com/d3p1/webservify/issues/1)] ([4c6b5a9](https://github.com/d3p1/webservify/commit/4c6b5a909b5836d6aab68e55be8a03eade06e380))
+* add install auth logic [[#1](https://github.com/d3p1/webservify/issues/1)] ([0709b0a](https://github.com/d3p1/webservify/commit/0709b0a89a1bf382d4a35ce4ee2d0fe28900a74c))
+* add secure ssh logic [[#1](https://github.com/d3p1/webservify/issues/1)] ([ef8729c](https://github.com/d3p1/webservify/commit/ef8729c93ec3a30cf5e48ad46deabddce91c6f56))
+* add ssh key env variable that will be used to generate ssh key [[#1](https://github.com/d3p1/webservify/issues/1)] ([aab7d70](https://github.com/d3p1/webservify/commit/aab7d7029479eefb1d8ef06dccd96ca4795799a0))
+* improve create user command so it runs over ssh [[#1](https://github.com/d3p1/webservify/issues/1)] ([ed148bb](https://github.com/d3p1/webservify/commit/ed148bb8b67a8272be96b33698cbacf6b404f9ed))
+* improve exec ssh command utility [[#1](https://github.com/d3p1/webservify/issues/1)] ([c4c5308](https://github.com/d3p1/webservify/commit/c4c53083daf46c22246e249eae32c711e786e7b8))
+* improve install firewall command so it runs over ssh [[#1](https://github.com/d3p1/webservify/issues/1)] ([8c7a598](https://github.com/d3p1/webservify/commit/8c7a59869016e5e2baf41659a32e756120c8d403))
+* improve install firewall logic [[#1](https://github.com/d3p1/webservify/issues/1)] ([696060d](https://github.com/d3p1/webservify/commit/696060d610f44882cb3c303792ec5b72e81b6741))
+* improve notice message for the webeservify entrypoint script [[#1](https://github.com/d3p1/webservify/issues/1)] ([0a293cb](https://github.com/d3p1/webservify/commit/0a293cb54f37bfa513cc12f4477ae9734ee37c3a))
+* improve webservify profile sample file [[#1](https://github.com/d3p1/webservify/issues/1)] ([1a31fb5](https://github.com/d3p1/webservify/commit/1a31fb5d9b0926389082cab404eec210aa944a59))
+
 ## [1.1.7](https://github.com/d3p1/webservify/compare/v1.1.6...v1.1.7) (2025-02-19)
 
 
