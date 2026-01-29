@@ -30,7 +30,7 @@ main() {
 # @return void
 ##
 _gen_ssh_keys() {
-    ssh-keygen -t ed25519 -b 4096 -c "$SSH_EMAIL" -f "$SSH_KEY"
+    ssh-keygen -t ed25519 -b 4096 -C "$SSH_EMAIL" -f "$SSH_KEY"
 }
 
 ##
