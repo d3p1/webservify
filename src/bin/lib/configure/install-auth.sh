@@ -70,8 +70,8 @@ _secure_ssh() {
     local conf="/etc/ssh/sshd_config.d/11-secure.conf"
 
     execute_ssh_cmd "touch $conf"
-    execute_ssh_cmd "PasswordAuthentication no | sudo tee -a $conf"
-    execute_ssh_cmd "PubkeyAuthentication yes | sudo tee -a $conf"
+    execute_ssh_cmd "echo PasswordAuthentication no | sudo tee -a $conf"
+    execute_ssh_cmd "echo PubkeyAuthentication yes | sudo tee -a $conf"
 
     sudo sshd -t && sudo systemctl restart sshd
 }
