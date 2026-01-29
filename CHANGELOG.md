@@ -1,3 +1,10 @@
+## [1.2.7](https://github.com/d3p1/webservify/compare/v1.2.6...v1.2.7) (2026-01-29)
+
+
+### Bug Fixes
+
+* adjust install auth and firewall logic [[#1](https://github.com/d3p1/webservify/issues/1)] ([4966228](https://github.com/d3p1/webservify/commit/4966228ed8e7c8b764a7b97fd495f72d56dc6854))
+
 ## [1.2.6](https://github.com/d3p1/webservify/compare/v1.2.5...v1.2.6) (2026-01-29)
 
 
