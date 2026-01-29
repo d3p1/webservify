@@ -9,6 +9,7 @@
 # @note Import required utilities
 ##
 source $BASE_DIR/lib/utils/log.sh
+source $BASE_DIR/lib/utils/exec-ssh-cmd.sh
 
 ##
 # Main
@@ -18,8 +19,8 @@ source $BASE_DIR/lib/utils/log.sh
 main() {
     print_message "Start create user" "notice"
     if [ -n "$CUSTOM_USER" ]; then
-        sudo adduser "$CUSTOM_USER"
-        sudo usermod -aG sudo "$CUSTOM_USER"
+        exec_root_ssh_cmd "$HOST" adduser "$CUSTOM_USER"
+        exec_root_ssh_cmd "$HOST" usermod -aG sudo "$CUSTOM_USER"
         print_message "User $CUSTOM_USER has been created with \`sudo\` privileges" "success"
     fi
     print_message "End create user" "notice"
