@@ -9,7 +9,7 @@
 # @note Import required utilities
 ##
 source $BASE_DIR/lib/utils/log.sh
-source $BASE_DIR/lib/utils/execute-remote-cmd.sh
+source $BASE_DIR/lib/configure/utils/execute-remote-cmd.sh
 
 ##
 # Main
@@ -56,10 +56,7 @@ _allow_ufw_web_ports() {
 ##
 _allow_ufw_custom_ssh_port() {
     print_message "Start allow \`ufw\` custom ssh port" "notice"
-    if [ -n "$CUSTOM_SSH_PORT" ]; then
-        _allow_ufw_port "$CUSTOM_SSH_PORT"
-        _configure_custom_ssh_port
-    fi
+    _allow_ufw_port "$CUSTOM_SSH_PORT"
     print_message "End allow \`ufw\` custom ssh port" "notice"
 }
 
@@ -84,22 +81,6 @@ _allow_ufw_port() {
     print_message "Start allow \`$1\` port" "notice"
     execute_remote_cmd "ufw allow \"""$1/tcp""\""
     print_message "End allow \`$1\` port" "notice"
-}
-
-##
-# Configure custom SSH port
-#
-# @return void
-# @link   https://www.hostinger.com/tutorials/how-to-change-ssh-port-vps
-##
-_configure_custom_ssh_port() {
-    local conf="/etc/ssh/sshd_config.d/11-port.conf"
-
-    print_message "Start \`ssh\` service configuration" "notice"
-    execute_remote_cmd "touch $conf"
-    execute_remote_cmd "echo Port $CUSTOM_SSH_PORT | tee -a $conf"
-    execute_remote_cmd "systemctl restart sshd"
-    print_message "End \`ssh\` service configuration" "notice"
 }
 
 ##

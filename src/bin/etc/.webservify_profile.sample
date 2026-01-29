@@ -12,8 +12,7 @@
 # @note        The `SSH_KEY` defines the path of the `ssh` key that will be
 #              generated to connect to the server
 # @note        The `CUSTOM_SSH_PORT` is the new port that should be used
-#              to establish `ssh` connections. If it is empty, it will be
-#              conserved the current port (`22` by default)
+#              to establish `ssh` connections
 ##
 export HOST=""
 export CUSTOM_USER=""
