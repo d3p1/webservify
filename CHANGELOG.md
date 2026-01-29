@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/d3p1/webservify/compare/v1.2.0...v1.2.1) (2026-01-29)
+
+
+### Bug Fixes
+
+* improve generate ssh keys command [[#1](https://github.com/d3p1/webservify/issues/1)] ([1a658b5](https://github.com/d3p1/webservify/commit/1a658b5372de51803ab114535330c2a2597703ae))
+
 # [1.2.0](https://github.com/d3p1/webservify/compare/v1.1.7...v1.2.0) (2026-01-29)
 
 
