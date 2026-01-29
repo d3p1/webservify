@@ -6,6 +6,17 @@
 ##
 
 ##
+# Execute `ssh` command as root
+#
+# @param  string $1 Host
+# @param  string $2 Command
+# @return void
+##
+exec_root_ssh_cmd() {
+    exec_ssh_cmd "root" "$1" "$2"
+}
+
+##
 # Execute `ssh` command
 #
 # @param  string $1 User
@@ -13,6 +24,6 @@
 # @param  string $3 Command
 # @return void
 ##
-execute_ssh_cmd() {
+exec_ssh_cmd() {
     ssh "$1"@"$2" $3
 }
