@@ -22,6 +22,11 @@ main() {
     _execute_configure_script "create-user"
 
     ##
+    # @note Execute script to install auth
+    ##
+    _execute_configure_script "install-auth"
+
+    ##
     # @note Execute script to add firewall
     ##
     _execute_configure_script "install-firewall"
