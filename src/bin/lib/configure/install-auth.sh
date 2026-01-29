@@ -73,7 +73,7 @@ _secure_ssh() {
     execute_ssh_cmd "echo PasswordAuthentication no | sudo tee -a $conf"
     execute_ssh_cmd "echo PubkeyAuthentication yes | sudo tee -a $conf"
 
-    sudo sshd -t && sudo systemctl restart sshd
+    execute_ssh_cmd "sshd -t && systemctl restart sshd"
 }
 
 ##
