@@ -30,6 +30,11 @@ main() {
     # @note Execute script to add firewall
     ##
     _execute_configure_script "install-firewall"
+
+    ##
+    # @note Execute script to install credentials
+    ##
+    _execute_configure_script "install-credentials"
 }
 
 ##
