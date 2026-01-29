@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/d3p1/webservify/compare/v1.2.4...v1.2.5) (2026-01-29)
+
+
+### Bug Fixes
+
+* improve install credentials logic [[#1](https://github.com/d3p1/webservify/issues/1)] ([fe45683](https://github.com/d3p1/webservify/commit/fe45683d93c9b63274ecf958a5cabe59641d970b))
+
 ## [1.2.4](https://github.com/d3p1/webservify/compare/v1.2.3...v1.2.4) (2026-01-29)
 
 
