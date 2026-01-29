@@ -27,6 +27,7 @@ main() {
 # @return void
 ##
 _store_ssh_connection() {
+    _add_ssh_config ""
     _add_ssh_config "##"
     _add_ssh_config "# @note $HOST"
     _add_ssh_config "# @note SSH server connection configured by webservify"
