@@ -1,3 +1,10 @@
+## [1.2.8](https://github.com/d3p1/webservify/compare/v1.2.7...v1.2.8) (2026-01-29)
+
+
+### Bug Fixes
+
+* copy public key for root but also custom user [[#1](https://github.com/d3p1/webservify/issues/1)] ([9af291a](https://github.com/d3p1/webservify/commit/9af291a3319a256722a11b719d3e3acc69aa2679))
+
 ## [1.2.7](https://github.com/d3p1/webservify/compare/v1.2.6...v1.2.7) (2026-01-29)
 
 

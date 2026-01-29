@@ -1,6 +1,6 @@
 {
     "name": "@d3p1/webservify",
-    "version": "1.2.7",
+    "version": "1.2.8",
     "description": "A tiny script to set up a machine as a web server",
     "author": "C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)",
     "homepage": "https://github.com/d3p1/webservify#readme",
