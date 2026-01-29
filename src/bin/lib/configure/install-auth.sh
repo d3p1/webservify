@@ -44,6 +44,7 @@ _gen_ssh_keys() {
 _copy_ssh_pub_key() {
     print_message "Start copy \`ssh\` public key to server" "notice"
     ssh-copy-id -i "$SSH_KEY.pub" "root@$HOST"
+    ssh-copy-id -i "$SSH_KEY.pub" "$CUSTOM_USER@$HOST"
     print_message "End copy \`ssh\` public key to server" "notice"
 }
 
