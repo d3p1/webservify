@@ -97,7 +97,7 @@ _configure_custom_ssh_port() {
 
     print_message "Start \`ssh\` service configuration" "notice"
     execute_ssh_cmd "touch $conf"
-    execute_ssh_cmd "echo ""Port $CUSTOM_SSH_PORT"" | tee -a $conf"
+    execute_ssh_cmd "echo Port $CUSTOM_SSH_PORT | tee -a $conf"
     execute_ssh_cmd "systemctl restart sshd"
     print_message "End \`ssh\` service configuration" "notice"
 }

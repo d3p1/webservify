@@ -9,6 +9,7 @@
 # @note Import required utilities
 ##
 source $BASE_DIR/lib/utils/log.sh
+source $BASE_DIR/lib/utils/execute-ssh-cmd.sh
 
 ##
 # Main
@@ -68,8 +69,9 @@ _store_ssh_connection() {
 _secure_ssh() {
     local conf="/etc/ssh/sshd_config.d/11-secure.conf"
 
-    echo "PasswordAuthentication no" | sudo tee -a "$conf"
-    echo "PubkeyAuthentication yes" | sudo tee -a "$conf"
+    execute_ssh_cmd "touch $conf"
+    execute_ssh_cmd "PasswordAuthentication no | sudo tee -a $conf"
+    execute_ssh_cmd "PubkeyAuthentication yes | sudo tee -a $conf"
 
     sudo sshd -t && sudo systemctl restart sshd
 }
