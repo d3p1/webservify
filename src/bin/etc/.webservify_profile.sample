@@ -7,10 +7,16 @@
 #              using the `root` user
 # @note        The `CUSTOM_USER` is the user with `sudo` privileges that
 #              should be created. If it is empty, no user will be created
+# @note        The `SSH_EMAIL` defines the email that will be
+#              used to generate the `ssh` key
+# @note        The `SSH_KEY` defines the path of the `ssh` key that will be
+#              generated to connect to the server
 # @note        The `CUSTOM_SSH_PORT` is the new port that should be used
 #              to establish `ssh` connections. If it is empty, it will be
 #              conserved the current port (`22` by default)
 ##
 export HOST=""
 export CUSTOM_USER=""
+export SSH_EMAIL=""
+export SSH_KEY=""
 export CUSTOM_SSH_PORT=""
