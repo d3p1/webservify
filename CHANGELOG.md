@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/d3p1/webservify/compare/v1.2.1...v1.2.2) (2026-01-29)
+
+
+### Bug Fixes
+
+* adjust ssh remote commands [[#1](https://github.com/d3p1/webservify/issues/1)] ([155fc1e](https://github.com/d3p1/webservify/commit/155fc1e136482922f100c54a7c68d43e2daa35b0))
+
 ## [1.2.1](https://github.com/d3p1/webservify/compare/v1.2.0...v1.2.1) (2026-01-29)
 
 
