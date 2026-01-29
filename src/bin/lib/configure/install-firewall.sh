@@ -9,7 +9,7 @@
 # @note Import required utilities
 ##
 source $BASE_DIR/lib/utils/log.sh
-source $BASE_DIR/lib/utils/execute-ssh-cmd.sh
+source $BASE_DIR/lib/utils/execute-remote-cmd.sh
 
 ##
 # Main
@@ -32,8 +32,8 @@ main() {
 ##
 _install_ufw() {
     print_message "Start install \`ufw\` package" "notice"
-    execute_ssh_cmd "apt-get update"
-    execute_ssh_cmd "apt-get install ufw"
+    execute_remote_cmd "apt-get update"
+    execute_remote_cmd "apt-get install ufw"
     print_message "End install \`ufw\` package" "notice"
 }
 
@@ -70,7 +70,7 @@ _allow_ufw_custom_ssh_port() {
 ##
 _enable_ufw() {
     print_message "Start enable \`ufw\` package" "notice"
-    execute_ssh_cmd "ufw enable"
+    execute_remote_cmd "ufw enable"
     print_message "End enable \`ufw\` package" "notice"
 }
 
@@ -82,7 +82,7 @@ _enable_ufw() {
 ##
 _allow_ufw_port() {
     print_message "Start allow \`$1\` port" "notice"
-    execute_ssh_cmd "ufw allow \"""$1/tcp""\""
+    execute_remote_cmd "ufw allow \"""$1/tcp""\""
     print_message "End allow \`$1\` port" "notice"
 }
 
@@ -96,9 +96,9 @@ _configure_custom_ssh_port() {
     local conf="/etc/ssh/sshd_config.d/11-port.conf"
 
     print_message "Start \`ssh\` service configuration" "notice"
-    execute_ssh_cmd "touch $conf"
-    execute_ssh_cmd "echo Port $CUSTOM_SSH_PORT | tee -a $conf"
-    execute_ssh_cmd "systemctl restart sshd"
+    execute_remote_cmd "touch $conf"
+    execute_remote_cmd "echo Port $CUSTOM_SSH_PORT | tee -a $conf"
+    execute_remote_cmd "systemctl restart sshd"
     print_message "End \`ssh\` service configuration" "notice"
 }
 
