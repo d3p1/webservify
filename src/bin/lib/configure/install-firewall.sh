@@ -93,9 +93,11 @@ _allow_ufw_port() {
 # @link   https://www.hostinger.com/tutorials/how-to-change-ssh-port-vps
 ##
 _configure_custom_ssh_port() {
+    local conf="/etc/ssh/sshd_config.d/11-port.conf"
+
     print_message "Start \`ssh\` service configuration" "notice"
-    execute_ssh_cmd "touch /etc/ssh/sshd_config.d/port.conf"
-    execute_ssh_cmd "echo ""Port $CUSTOM_SSH_PORT"" | tee -a /etc/ssh/sshd_config.d/port.conf"
+    execute_ssh_cmd "touch $conf"
+    execute_ssh_cmd "echo ""Port $CUSTOM_SSH_PORT"" | tee -a $conf"
     execute_ssh_cmd "systemctl restart sshd"
     print_message "End \`ssh\` service configuration" "notice"
 }
