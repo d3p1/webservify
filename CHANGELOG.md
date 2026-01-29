@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/d3p1/webservify/compare/v1.2.3...v1.2.4) (2026-01-29)
+
+
+### Bug Fixes
+
+* adjust secure ssh commands [[#1](https://github.com/d3p1/webservify/issues/1)] ([0d3e61c](https://github.com/d3p1/webservify/commit/0d3e61c54e1fe9bfb6c424ae7421e7c62003793a))
+
 ## [1.2.3](https://github.com/d3p1/webservify/compare/v1.2.2...v1.2.3) (2026-01-29)
 
 
