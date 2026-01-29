@@ -2,7 +2,7 @@
 
 ##
 # @description Webservify.
-#              Configure a machine as a web server
+#              Configure a web server
 # @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
 ##
 
@@ -79,7 +79,7 @@ _execute_command() {
 ##
 _print_help() {
     print_message "Usage:" "normal"
-    print_message " - To configure a machine as a web server: \`webservify configure\`" "normal"
+    print_message " - To configure a web server: \`webservify configure\`" "normal"
     print_message "Before using this script, remember to configure the \`.webservify_profile\` file" "notice"
 }
 
